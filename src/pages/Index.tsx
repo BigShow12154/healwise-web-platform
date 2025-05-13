@@ -1,21 +1,17 @@
-
 import { useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { Heart } from 'lucide-react';
-
 const Index = () => {
   useEffect(() => {
     document.title = 'HealWise - 健康管理平台';
   }, []);
-
-  return (
-    <div className="min-h-screen flex flex-col">
+  return <div className="min-h-screen flex flex-col">
       <header className="w-full bg-white border-b py-4 px-6">
         <div className="container flex justify-between items-center">
           <div className="flex items-center gap-2">
             <Heart className="w-6 h-6 text-medical" />
-            <span className="text-xl font-bold text-medical">HealWise</span>
+            <span className="text-xl font-bold text-medical">译脉中医</span>
           </div>
           
           <div className="flex items-center gap-4">
@@ -35,21 +31,12 @@ const Index = () => {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-medical tracking-tight mb-6">
               全方位健康管理平台
             </h1>
-            <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto mb-8">
-              通过智能穿戴设备数据分析，为您和您的家人提供个性化健康管理服务
-            </p>
+            <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto mb-8">通过多模态的数据分析，为您和您的家人提供个性化健康管理服务</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button 
-                asChild 
-                className="text-lg py-6 px-8 bg-medical hover:bg-medical-dark"
-              >
+              <Button asChild className="text-lg py-6 px-8 bg-medical hover:bg-medical-dark">
                 <Link to="/dashboard">进入平台</Link>
               </Button>
-              <Button 
-                asChild 
-                variant="outline" 
-                className="text-lg py-6 px-8"
-              >
+              <Button asChild variant="outline" className="text-lg py-6 px-8">
                 <Link to="/register">免费注册</Link>
               </Button>
             </div>
@@ -136,11 +123,7 @@ const Index = () => {
         <section className="py-16 bg-blue-50">
           <div className="container px-4 text-center">
             <h2 className="text-3xl font-bold mb-12">立即开始您的健康管理</h2>
-            <Button 
-              asChild 
-              size="lg" 
-              className="text-lg py-6 px-8 bg-medical hover:bg-medical-dark"
-            >
+            <Button asChild size="lg" className="text-lg py-6 px-8 bg-medical hover:bg-medical-dark">
               <Link to="/register">免费注册</Link>
             </Button>
           </div>
@@ -153,11 +136,9 @@ const Index = () => {
             <div className="mb-4 md:mb-0">
               <div className="flex items-center gap-2">
                 <Heart className="w-5 h-5 text-medical-light" />
-                <span className="text-lg font-bold text-medical-light">HealWise</span>
+                <span className="text-lg font-bold text-medical-light">译脉中医</span>
               </div>
-              <p className="text-sm text-gray-400 mt-1">
-                您的全方位健康管理解决方案
-              </p>
+              <p className="text-sm text-gray-400 mt-1">多模态数字化中医领航者</p>
             </div>
             
             <div className="flex flex-col md:flex-row gap-4 md:gap-8">
@@ -173,8 +154,6 @@ const Index = () => {
           </div>
         </div>
       </footer>
-    </div>
-  );
+    </div>;
 };
-
 export default Index;

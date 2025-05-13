@@ -11,6 +11,9 @@ import ProfilePage from "./pages/ProfilePage";
 import SymptomsPage from "./pages/SymptomsPage";
 import QuestionnairePage from "./pages/QuestionnairePage";
 import WearablesPage from "./pages/WearablesPage";
+import FamilyPage from "./pages/FamilyPage";
+import DoctorsPage from "./pages/DoctorsPage";
+import ShopPage from "./pages/ShopPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -30,6 +33,11 @@ const App = () => (
           <Route path="/symptoms" element={<SymptomsPage />} />
           <Route path="/questionnaire" element={<QuestionnairePage />} />
           <Route path="/wearables" element={<WearablesPage />} />
+          <Route path="/family" element={<FamilyPage />} />
+          <Route path="/doctors" element={<DoctorsPage />} />
+          <Route path="/shop" element={<ShopPage />} />
+          <Route path="/settings" element={<ProfilePage />} />
+          <Route path="/appointments" element={<ProfilePage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

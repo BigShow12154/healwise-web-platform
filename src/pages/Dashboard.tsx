@@ -3,7 +3,6 @@ import Layout from '@/components/Layout';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Activity, Calendar, FileText, Heart, Search, ShoppingCart, User, Users } from 'lucide-react';
 import { Link } from 'react-router-dom';
-
 const featureCards = [{
   title: '个人信息',
   description: '管理您的基本信息、身高体重等个人健康数据',
@@ -61,7 +60,6 @@ const featureCards = [{
   iconColor: 'text-indigo-500',
   link: '/appointments'
 }];
-
 const Dashboard = () => {
   return <Layout>
       <div className="container px-4">
@@ -73,7 +71,7 @@ const Dashboard = () => {
         <section className="mb-12 bg-medical/5 rounded-lg p-6">
           <div className="flex flex-col md:flex-row items-center justify-between">
             <div className="md:max-w-lg mb-6 md:mb-0">
-              <h2 className="text-xl font-semibold text-medical mb-2">开始您的健康管理</h2>
+              <h2 className="text-xl font-semibold text-medical mb-2">开启您的健康管理</h2>
               <p className="text-muted-foreground mb-4">
                 完善个人信息，连接您的智能设备，获取个性化的健康建议和分析。
               </p>

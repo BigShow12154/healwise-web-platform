@@ -3,6 +3,7 @@ import Layout from '@/components/Layout';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Activity, Calendar, FileText, Heart, Search, ShoppingCart, User, Users } from 'lucide-react';
 import { Link } from 'react-router-dom';
+
 const featureCards = [{
   title: '个人信息',
   description: '管理您的基本信息、身高体重等个人健康数据',
@@ -60,6 +61,7 @@ const featureCards = [{
   iconColor: 'text-indigo-500',
   link: '/appointments'
 }];
+
 const Dashboard = () => {
   return <Layout>
       <div className="container px-4">
@@ -75,8 +77,8 @@ const Dashboard = () => {
               <p className="text-muted-foreground mb-4">
                 完善个人信息，连接您的智能设备，获取个性化的健康建议和分析。
               </p>
-              <Button as={Link} to="/profile" className="bg-medical hover:bg-medical-dark">
-                立即开始
+              <Button className="bg-medical hover:bg-medical-dark" asChild>
+                <Link to="/profile">立即开始</Link>
               </Button>
             </div>
             <div className="w-full md:w-auto">
@@ -99,7 +101,7 @@ const Dashboard = () => {
                 <CardDescription>{card.description}</CardDescription>
               </CardContent>
               <CardFooter>
-                <Button asChild variant="ghost" className="w-full justify-start hover:bg-transparent hover:text-medical">
+                <Button variant="ghost" className="w-full justify-start hover:bg-transparent hover:text-medical" asChild>
                   <Link to={card.link}>查看详情</Link>
                 </Button>
               </CardFooter>
